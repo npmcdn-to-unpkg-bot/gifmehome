@@ -1,0 +1,22 @@
+= image_tag(photo.image(:medium), id: 'meme-template')
+
+= form_tag(photo_memes_url, id: 'caption-form', method: 'POST', data: {preview: _preview_photo_url(photo)}) do
+  %label{for: 'high-caption'} Górny tekst
+  %input{type: 'text', name: 'high_caption', id: 'high-caption'}
+  %label{for: 'low-caption'} Dolny tekst
+  %input{type: 'text', name: 'low_caption', id: 'low-caption'}
+  %input{type: 'submit'}
+
+:javascript
+  function preview() {
+    var previewUrl = $('#caption-form').data('preview');
+    var lowCaption = $('#low-caption').val();
+    var highCaption = $('#high-caption').val();
+    $('#meme-template').attr('src', previewUrl + '?high_caption=' + highCaption + '&low_caption=' + lowCaption);
+  }
+  $(document).ready( function() {
+    $(document).on('keyup', '#high-caption,#low-caption', $.throttle(1000, false, function(e) {
+      preview();
+    }));
+  } );
+

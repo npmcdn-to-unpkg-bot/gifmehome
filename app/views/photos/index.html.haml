@@ -1,0 +1,5 @@
+%ul
+- photos.each do |p|
+  %li
+    = image_tag(p.image(:medium))
+    = link_to 'Stwórz mema', new_photo_meme_path(p)
