@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151214185043) do
+ActiveRecord::Schema.define(version: 20151215151406) do
 
   create_table "memes", force: :cascade do |t|
     t.datetime "created_at",         null: false
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20151214185043) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.text     "name"
   end
 
 end
