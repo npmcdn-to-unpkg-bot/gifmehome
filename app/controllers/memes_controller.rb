@@ -1,3 +1,5 @@
+require "meme_generator"
+
 class MemesController < ApplicationController
 
   expose :photo
