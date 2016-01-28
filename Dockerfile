@@ -1,6 +1,6 @@
 FROM ruby:2.2.3-slim
 
-RUN apt-get update && apt-get install -y git-core build-essential libsqlite3-dev libmagickwand-dev
+RUN apt-get update && apt-get install -y git-core build-essential libmagickwand-dev libpq-dev
 RUN gem install foreman --no-ri
 
 ADD Gemfile /app/
