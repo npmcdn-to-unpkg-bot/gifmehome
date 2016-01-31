@@ -1,0 +1,23 @@
+.navbar-cn
+  %nav.navbar
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#main-menu", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Przełącz nawigację
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "/"}
+        = image_tag('header-logo', alt: 'GIFmeHOME', width: 226, height: 64)
+    #main-menu.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li.home{class: controller_name == 'photos' && 'active'}
+          %a{:href => "#"} Stwórz
+        %li
+          %a{:href => "#"} O akcji
+        %li
+          %a{:href => "#"} Kategorie
+        %li{class: controller_name == 'animals' && 'active'}
+          = link_to 'Zwierzęta', animals_url
+        %li
+          %a{:href => "#"}
+            %strong Wspieraj

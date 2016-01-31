@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     get '_preview', on: :member, to: 'memes#preview'
   end
 
-  root to: 'photos#index'
+  resources :animals do
+
+  end
+
+  root to: 'memes#index'
 
 end

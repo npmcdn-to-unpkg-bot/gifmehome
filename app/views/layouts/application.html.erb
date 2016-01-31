@@ -1,14 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-  <title>Gifmehome</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GIFmeHOME</title>
+
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
+
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="css/main.css" rel="stylesheet">
+  <script>if (typeof jQuery === 'undefined') {
+      document.write(unescape('%3Cscript%20src%3D%22js/jquery.js%22%3E%3C/script%3E'));
+  }
+  </script>
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.js"></script>
+  <![endif]-->
 </head>
 <body>
+<div class="wrapper">
+  <div class="container">
 
-<%= yield %>
+    <div class="row">
+      <div class="col-xs-12">
 
+        <%= render 'navbar' %>
+
+      </div> <!-- .col -->
+    </div> <!-- .row -->
+
+    <div class="row steps-cn">
+      <div class="col-sm-4">
+        <figure class="step">
+          <!--img src="img/step-1.png" alt="" width="360" height="200"-->
+          <%= image_tag('step-1', width: 360, height: 200, alt: '') %>
+          <figcaption>
+            <p>Komentuj, używając naszych memów</p>
+          </figcaption>
+        </figure>
+      </div> <!-- .col-sm-4 -->
+      <div class="col-sm-4">
+        <figure class="step">
+          <!--img src="img/step-2.png" alt="" width="360" height="200"-->
+          <%= image_tag('step-2', width: 360, height: 200, alt: '') %>
+          <figcaption>
+            <p>Rób ze zwierząt ze schroniska gwiazdy internetu</p>
+          </figcaption>
+        </figure>
+      </div> <!-- .col-sm-4 -->
+      <div class="col-sm-4">
+        <figure class="step">
+          <!--img src="img/step-3.png" alt="" width="360" height="200"-->
+          <%= image_tag('step-3', width: 360, height: 200, alt: '') %>
+          <figcaption>
+            <p>Zwiększaj ich szansę na znalezienie domu</p>
+          </figcaption>
+        </figure>
+      </div> <!-- .col-sm-4 -->
+    </div> <!-- .row -->
+
+  </div> <!-- .container -->
+
+  <%= yield %>
+
+  <%= render 'footer' %>
+
+</div>
+<%= javascript_include_tag 'application' %>
 </body>
 </html>
