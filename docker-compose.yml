@@ -1,0 +1,18 @@
+db:
+  image: postgres:9.5
+  ports:
+    - 5432
+  environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=qwerty
+
+app:
+  build: .
+  command: rails s -b 0.0.0.0
+  volumes:
+    - .:/app
+  ports:
+    - "3000:3000"
+  environment:
+    - DB_HOST=gifmehome_db_1
+    - PORT=3000

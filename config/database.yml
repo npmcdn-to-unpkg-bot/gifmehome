@@ -12,8 +12,8 @@ default: &default
 development:
   <<: *default
   database: gifmehome_dev
-  host: localhost
-  port: 32773
+  host: "<%= ENV['DB_HOST'] %>"
+  #port: 32773
   user: postgres
   password: qwerty
 
