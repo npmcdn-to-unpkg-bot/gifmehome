@@ -45,3 +45,5 @@ gem 'haml-rails'
 gem 'rmagick'
 
 gem "bower-rails", "~> 0.10.0"
+
+gem 'simple_form'
