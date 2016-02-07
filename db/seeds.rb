@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Photo.create!(image: File.open("#{Rails.root}/db/photos/Grumpy-Cat.jpg"))
-Photo.create!(image: File.open("#{Rails.root}/db/photos/First-World-Problems.jpg"))
+#Photo.create!(image: File.open("#{Rails.root}/db/photos/Grumpy-Cat.jpg"))
+#Photo.create!(image: File.open("#{Rails.root}/db/photos/First-World-Problems.jpg"))

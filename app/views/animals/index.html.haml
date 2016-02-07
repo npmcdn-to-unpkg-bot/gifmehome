@@ -14,7 +14,7 @@
             - i.last.each do |photo|
 
               %figure.item.with-hover
-                %a{:href => photo_path(photo)}
+                %a{:href => animal_path(photo.name)}
                   = image_tag photo.image
                 %figcaption.hover
                   %p= photo.name.capitalize

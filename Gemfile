@@ -47,3 +47,5 @@ gem 'rmagick'
 gem "bower-rails", "~> 0.10.0"
 
 gem 'simple_form'
+
+gem 'friendly_id', '~> 5.1.0'
