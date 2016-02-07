@@ -14,3 +14,5 @@ RUN bundle install --local
 
 VOLUME ["/app"]
 
+RUN apt-get install -y ImageMagick
+
