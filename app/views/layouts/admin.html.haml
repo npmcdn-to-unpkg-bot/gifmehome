@@ -18,7 +18,7 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
 
-  %body
+  %body.admin-panel
     %nav.navbar.navbar-inverse.navbar-fixed-top
       .container
         .navbar-header
@@ -27,7 +27,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{:href => "#"} GIFmeHOME Admin
+          %a.navbar-brand{:href => admin_url} GIFmeHOME Admin
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active
