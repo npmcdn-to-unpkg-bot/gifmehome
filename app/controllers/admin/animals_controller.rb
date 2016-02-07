@@ -7,6 +7,11 @@ class Admin::AnimalsController < ApplicationController
   layout 'admin'
 
   expose :animal, attributes: :animal_params
+  expose :animals
+
+  def index
+
+  end
 
   def create
     if animal.save

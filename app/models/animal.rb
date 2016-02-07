@@ -4,6 +4,10 @@ class Animal < ActiveRecord::Base
 
   attr_accessor :character, :attitude, :home
 
+  %w(name lead character attitude home).each do |a|
+    validates a, presence: true
+  end
+
   after_validation do
     self.description ||= {}
     %w(character attitude home).each do |s|

@@ -1,0 +1,7 @@
+= link_to 'Dodaj zwierzaka', new_admin_animal_path, class: 'btn btn-primary'
+
+= table_for(animals, class: 'table') do |t|
+  - t.column :name, "Imię"
+  - t.column :actions, "Akcje" do |a|
+    = link_to 'Podgląd', animal_path(a)
+    = link_to 'Edytuj', edit_admin_animal_path(a)
