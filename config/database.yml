@@ -12,10 +12,10 @@ default: &default
 development:
   <<: *default
   database: gifmehome_dev
-  host: "<%= ENV.fetch 'DB_HOST', 'localhost' %>"
-  port: "<%= ENV.fetch 'DB_PORT', '5432' %>"
-  user: postgres
-  password: qwerty
+  #host: "<%= ENV.fetch 'DB_HOST', 'localhost' %>"
+  #port: "<%= ENV.fetch 'DB_PORT', '5432' %>"
+  user: "<%= ENV.fetch 'DB_USER', 'vagrant' %>"
+  #password: "<%= ENV.fetch 'DB_PASS', 'vagrant' %>"
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
