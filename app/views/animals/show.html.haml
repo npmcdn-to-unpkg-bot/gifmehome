@@ -1,0 +1,62 @@
+.container
+  .row
+    .col-sm-4.col-md-3
+      %figure.thumbnail
+        -#  %img{:alt => "", :src => "http://lorempixel.com/600/800/animals/1"}/
+        = image_tag main_photo.try(:image)
+        %figcaption.bg-secondary
+          %p Czeka na adopcję
+      %p
+        %strong.text-primary Miejsce:
+        %br/
+        Korabiewice
+      %p
+        %strong.text-primary Kontakt:
+        %br/
+        Schronisko Viva!
+        %br/
+        96-330 Puszcza Mariańska
+        %br/
+        Korabiewice 11
+        %br/
+        %br/
+        tel: 790 102 292
+        %br/
+        mail: adopcje@schronisko.info.pl
+        %br/
+        %strong www.schronisko.info.pl
+    .col-sm-8.col-md-9
+      .page-header
+        %h1= animal.name
+      %p
+        %strong= animal.lead
+      %h4 Charakter
+      %p= animal.description['character']
+      %h4 Nastawienie do innych zwierząt
+      %p= animal.description['attitude']
+      %h4 Jakiego domu szuka?
+      %p= animal.description['home']
+
+      %h4 Chcesz przygarnąć naszą gwiazdę? Wypełnij formularz.
+
+      %form.form{:action => ""}
+        .row
+          .col-md-4
+            .form-group
+              %label.sr-only{:for => "imie"} Imię
+              %input#imie.form-control{:placeholder => "Imię", :type => "text"}/
+          .col-md-4
+            .form-group
+              %label.sr-only{:for => "nazwisko"} Nazwisko
+              %input#nazwisko.form-control{:placeholder => "Nazwisko", :type => "text"}/
+          .col-md-4
+            .form-group
+              %label.sr-only{:for => "email"} Adres e-mail
+              %input#email.form-control{:placeholder => "Adres e-mail", :type => "email"}/
+        .row
+          .col-xs-12
+            .form-group
+              %label.sr-only{:for => "tresc"} Napisz parę słów o sobie i o swoim domu...
+              %textarea#tresc.form-control{:placeholder => "Napisz parę słów o sobie i o swoim domu...", :rows => "8"}
+          .col-xs-12
+            %input.text-uppercase.btn.btn-secondary.pull-right{:type => "submit", :value => "Wyślij"}/

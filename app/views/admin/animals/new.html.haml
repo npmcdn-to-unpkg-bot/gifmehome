@@ -1,0 +1,7 @@
+= simple_form_for(animal, url: admin_animals_path) do |form|
+  = form.input :name, as: :string, label: 'Imię zwierzaka'
+  = form.input :lead, as: :text, label: 'Podsumowanie'
+  = form.input :character, as: :text, label: 'Charakter'
+  = form.input :attitude, as: :text, label: 'Nastawienie do innych zwierząt'
+  = form.input :home, as: :text, label: 'Jakiego domu szuka?'
+  = form.button :submit
