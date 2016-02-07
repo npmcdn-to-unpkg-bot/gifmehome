@@ -10,7 +10,6 @@
   <%= csrf_meta_tags %>
 
   <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  <link href="css/main.css" rel="stylesheet">
   <script>if (typeof jQuery === 'undefined') {
       document.write(unescape('%3Cscript%20src%3D%22js/jquery.js%22%3E%3C/script%3E'));
   }
@@ -32,35 +31,7 @@
       </div> <!-- .col -->
     </div> <!-- .row -->
 
-    <div class="row steps-cn">
-      <div class="col-sm-4">
-        <figure class="step">
-          <!--img src="img/step-1.png" alt="" width="360" height="200"-->
-          <%= image_tag('step-1', width: 360, height: 200, alt: '') %>
-          <figcaption>
-            <p>Komentuj, używając naszych memów</p>
-          </figcaption>
-        </figure>
-      </div> <!-- .col-sm-4 -->
-      <div class="col-sm-4">
-        <figure class="step">
-          <!--img src="img/step-2.png" alt="" width="360" height="200"-->
-          <%= image_tag('step-2', width: 360, height: 200, alt: '') %>
-          <figcaption>
-            <p>Rób ze zwierząt ze schroniska gwiazdy internetu</p>
-          </figcaption>
-        </figure>
-      </div> <!-- .col-sm-4 -->
-      <div class="col-sm-4">
-        <figure class="step">
-          <!--img src="img/step-3.png" alt="" width="360" height="200"-->
-          <%= image_tag('step-3', width: 360, height: 200, alt: '') %>
-          <figcaption>
-            <p>Zwiększaj ich szansę na znalezienie domu</p>
-          </figcaption>
-        </figure>
-      </div> <!-- .col-sm-4 -->
-    </div> <!-- .row -->
+    <%= render 'steps' if current_page?(root_path) %>
 
   </div> <!-- .container -->
 

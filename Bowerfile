@@ -10,3 +10,5 @@ asset    "font-awesome", "fontawesome#~4.5.0"
 asset    "masonry", "~4.0.0"
 asset    "imagesloaded", "~4.1.0"
 
+# Admin
+asset   "dropzone"

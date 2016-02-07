@@ -16,4 +16,5 @@
 //= require bootstrap
 //= require masonry
 //= require imagesloaded
+//= require dropzone
 //= require_tree .

@@ -1,0 +1,47 @@
+.steps-cn{
+	margin-bottom: 20px;
+	> .col-sm-4{
+		position: relative;
+		&::after{
+			position:absolute;
+			display: block;
+			font: normal normal normal @fa-font-size-base/@fa-line-height-base FontAwesome; // shortening font declaration
+			font-size: inherit; // can't have font-size inherit on line above, so need to override
+			text-rendering: auto; // optimizelegibility throws things off #1094
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			content: @fa-var-chevron-right;
+			left:100%;
+			top:50%;
+			margin-top:-9px;
+			margin-left:-6px;
+		}
+		@media(max-width:@screen-xs-max){
+			margin-bottom: @grid-gutter-width;
+			&::after{
+				content: @fa-var-chevron-down;
+				left:50%;
+				top:100%;
+				margin-top:15px;
+				margin-left:-9px;
+			}
+		}
+		&:last-child{
+			&::after{
+				display: none;
+			}
+		}
+	}
+	.step{
+		img{
+			margin: 0 auto;
+			.img-responsive();
+		}
+		figcaption{
+			text-align: center;
+			width: auto;
+    		max-width: 200px;
+    		margin:0 auto;
+		}
+	}
+}

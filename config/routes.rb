@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    get '/', to: 'photos#index'
+
+    resources :photos
+  end
+
   resources :photos do
     resources :memes do
 
@@ -10,6 +16,8 @@ Rails.application.routes.draw do
   resources :animals do
 
   end
+
+
 
   root to: 'memes#index'
 
